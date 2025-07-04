@@ -45,19 +45,6 @@
     a:hover {
       text-decoration: underline;
     }
-    button {
-      padding: 6px 12px;
-      background: #5b3cc4;
-      color: white;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-      transition: background 0.3s;
-      margin-right: 8px;
-    }
-    button:hover {
-      background: #7a57d1;
-    }
     .fade-in {
       animation: fadeIn 2s ease forwards;
     }
@@ -70,39 +57,46 @@
 <body>
   <h1>🚀 How to Log In to Your CAVA Google Account</h1>
 
-  <!-- Tabs -->
-<div style="text-align: center; margin-top: 40px;">
+  <!-- Modern centered large buttons -->
+  <div style="text-align: center; margin-top: 40px;">
+    <a href="https://accounts.google.com"
+       style="
+         display: inline-block;
+         padding: 22px 60px;
+         font-size: 26px;
+         background-color: #ffffff;
+         color: #5b3cc4;
+         border: 3px solid #5b3cc4;
+         border-radius: 12px;
+         box-shadow: 2px 2px 8px rgba(0,0,0,0.15);
+         text-decoration: none;
+         margin: 20px;
+         transition: all 0.3s;
+       "
+       onmouseover="this.style.backgroundColor='#5b3cc4'; this.style.color='white';"
+       onmouseout="this.style.backgroundColor='white'; this.style.color='#5b3cc4';">
+      First Time Login
+    </a>
 
-  <a href="YOUR_FIRST_TIME_LOGIN_LINK"
-     style="
-       display: inline-block;
-       padding: 20px 50px;
-       font-size: 24px;
-       background-color: #5b3cc4;
-       color: white;
-       text-decoration: none;
-       border-radius: 10px;
-       margin: 20px;
-     ">
-    First Time Login
-  </a>
-
-  <a href="YOUR_RESET_PASSWORD_LINK"
-     style="
-       display: inline-block;
-       padding: 20px 50px;
-       font-size: 24px;
-       background-color: #5b3cc4;
-       color: white;
-       text-decoration: none;
-       border-radius: 10px;
-       margin: 20px;
-     ">
-    Reset Password
-  </a>
-
-</div>
-
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSf7ibJRMsXPblo1OGCoAQtscVrJhzLvmrH6svRNMt1s1GmoqA/viewform"
+       style="
+         display: inline-block;
+         padding: 22px 60px;
+         font-size: 26px;
+         background-color: #ffffff;
+         color: #5b3cc4;
+         border: 3px solid #5b3cc4;
+         border-radius: 12px;
+         box-shadow: 2px 2px 8px rgba(0,0,0,0.15);
+         text-decoration: none;
+         margin: 20px;
+         transition: all 0.3s;
+       "
+       onmouseover="this.style.backgroundColor='#5b3cc4'; this.style.color='white';"
+       onmouseout="this.style.backgroundColor='white'; this.style.color='#5b3cc4';">
+      Reset Password
+    </a>
+  </div>
 
   <!-- First Time Login Section -->
   <div id="login" style="display:block;">
@@ -183,13 +177,6 @@
       const password = `${first}${last}${day}${month}${year}`;
       document.getElementById('passwordResult').innerText = `Your password is: ${password}`;
     }
-
-    function showSection(section) {
-      document.getElementById('login').style.display = (section === 'login') ? 'block' : 'none';
-      document.getElementById('reset').style.display = (section === 'reset') ? 'block' : 'none';
-    }
   </script>
 </body>
 </html>
-
-
