@@ -4,14 +4,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>CAVA Google Account Login Instructions</title>
-  
-<h2>📚 Quick Index</h2>
-<ul style="list-style: none; padding-left: 0;">
-  <li>🔰 <a href="#first-time-login" style="color:#5b3cc4;">How to Log In for the First Time</a></li>
-  <li>🔄 <a href="#forgot-password" style="color:#5b3cc4;">Forgot Your Password? Reset Instructions</a></li>
-</ul>
-<hr>
-
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <style>
     body {
@@ -61,6 +53,7 @@
       border-radius: 4px;
       cursor: pointer;
       transition: background 0.3s;
+      margin-right: 8px;
     }
     button:hover {
       background: #7a57d1;
@@ -77,65 +70,74 @@
 <body>
   <h1>🚀 How to Log In to Your CAVA Google Account</h1>
 
-  <h2>🔰 If this is your first time signing in:</h2>
-
-<h3>🌐 Step 1: Sign Out of All Google Accounts</h3>
-<p>Before you begin, make sure to <strong>sign out of all personal or other Google accounts</strong> on your browser. This avoids conflicts when logging into your CAVA account.</p>
-<p>You can do this by clicking your profile picture at the top right of the browser window and selecting "Sign out of all accounts."</p>
-<img src="https://i.postimg.cc/wB1KGxvd/G1-1.png" alt="Sign out of Google accounts" style="width:30%; max-width:600px; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.1); margin:20px auto; display:block;">
-
-<h3>🌐 Step 2: Go to Google Accounts</h3>
-<p>✅ Once you've signed out, go to <a href="https://accounts.google.com" target="_blank">https://accounts.google.com</a> to begin logging into your CAVA account.</p>
-<img src="https://i.postimg.cc/vm1nHKXd/G1.png" alt="Go to Google Accounts" style="width:100%; max-width:600px; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.1); margin:20px auto; display:block;">
-
-
-  <h3>📝 Step 3: Enter Your Username and Click Next</h3>
-  <p>Type your CAVA username, which is your student ID followed by:</p>
-  <pre>@californiava.org</pre>
-  <img src="https://i.postimg.cc/sxSdj3GZ/Screen-Shot-2025-07-03-at-5-07-15-PM.png" alt="Enter Username">
-
-  <h3>🔑 Step 4: Generate Your Password</h3>
-  <p>Your default password format is:</p>
-  <pre>FirstInitial + LastInitial + Day + Month + Year</pre>
-  <ul>
-    <li><strong>FirstInitial:</strong> First letter of your first name, capitalized</li>
-    <li><strong>LastInitial:</strong> First letter of your last name, capitalized</li>
-    <li><strong>Day:</strong> 1-digit day of birth (no leading zero)</li>
-    <li><strong>Month:</strong> 1-digit month of birth (no leading zero)</li>
-    <li><strong>Year:</strong> 4-digit birth year</li>
-  </ul>
-
-  <div style="background:#f9f9f9; padding:15px; border-radius:8px; margin:20px 0;">
-    <h4>🎯 Password Generator</h4>
-    <label>First Initial: <input type="text" id="firstInitial" maxlength="1" style="width:30px; text-transform:uppercase;"></label><br><br>
-    <label>Last Initial: <input type="text" id="lastInitial" maxlength="1" style="width:30px; text-transform:uppercase;"></label><br><br>
-    <label>Day of Birth (1-31): <input type="number" id="day" min="1" max="31" style="width:60px;"></label><br><br>
-    <label>Month of Birth (1-12): <input type="number" id="month" min="1" max="12" style="width:60px;"></label><br><br>
-    <label>Year of Birth (4 digits): <input type="number" id="year" min="1900" max="2100" style="width:80px;"></label><br><br>
-    <button onclick="generatePassword()">🚀 Generate Password</button>
-    <p id="passwordResult" style="margin-top:15px; font-weight:bold; color:#5b3cc4;"></p>
+  <!-- Tabs -->
+  <div style="margin-bottom: 20px;">
+    <button onclick="showSection('login')">🔰 First Time Login</button>
+    <button onclick="showSection('reset')">🔄 Reset Password</button>
   </div>
 
-  <h3>🔒 Step 5: Enter Your Password and Click "Next"</h3>
-  <p>Paste or type your generated password into the password field, then click <strong>Next</strong>.</p>
-  <img src="https://i.postimg.cc/C5DGmQ9g/Screen-Shot-2025-07-03-at-5-19-33-PM.png" alt="Enter Password">
+  <!-- First Time Login Section -->
+  <div id="login" style="display:block;">
+    <h2>🔰 If this is your first time signing in:</h2>
 
-  <h3>✅ Step 6: Agree to Google’s Terms and Update Your Password</h3>
-  <p>You may be prompted to review and agree to Google's Terms of Service and Privacy Policy. After agreeing, you'll be asked to create a new password. Make sure to save this password and remember it for future logins.</p>
+    <h3>🌐 Sign Out of All Google Accounts</h3>
+    <p>Before you begin, make sure to <strong>sign out of all personal or other Google accounts</strong> on your browser. This avoids conflicts when logging into your CAVA account.</p>
+    <p>You can do this by clicking your profile picture at the top right of the browser window and selecting "Sign out of all accounts."</p>
+    <img src="https://i.postimg.cc/wB1KGxvd/G1-1.png" alt="Sign out of Google accounts" style="width:50%; max-width:600px;">
 
-  <h3>🎉 Step 7: You’re In!</h3>
-  <p>You can now use Google Drive, Docs, Classroom, and all CAVA Google tools. Stay logged in during the day so you can also use Amplify Classroom and apps like Google Slides and Docs across your different classes.</p>
+    <h3>🌐 Go to Google Accounts</h3>
+    <p>✅ Once you've signed out, go to <a href="https://accounts.google.com" target="_blank">https://accounts.google.com</a> to begin logging into your CAVA account.</p>
+    <img src="https://i.postimg.cc/vm1nHKXd/G1.png" alt="Go to Google Accounts">
 
-  <hr>
+    <h3>📝 Enter Your Username and Click Next</h3>
+    <p>Type your CAVA username, which is your student ID followed by:</p>
+    <pre>@californiava.org</pre>
+    <img src="https://i.postimg.cc/sxSdj3GZ/Screen-Shot-2025-07-03-at-5-07-15-PM.png" alt="Enter Username">
 
-  <h2>🔄 If you’ve signed in before but forgot your password:</h2>
-  <p>Don’t worry! If you can’t log in because you forgot your password, simply fill out the 
-    <a href="https://docs.google.com/forms/d/e/1FAIpQLSf7ibJRMsXPblo1OGCoAQtscVrJhzLvmrH6svRNMt1s1GmoqA/viewform" target="_blank">
-    CAVA Password Reset Request Form</a>.</p>
+    <h3>🔑 Generate Your Password</h3>
+    <p>Your default password format is:</p>
+    <pre>FirstInitial + LastInitial + Day + Month + Year</pre>
+    <ul>
+      <li><strong>FirstInitial:</strong> First letter of your first name, capitalized</li>
+      <li><strong>LastInitial:</strong> First letter of your last name, capitalized</li>
+      <li><strong>Day:</strong> 1-digit day of birth (no leading zero)</li>
+      <li><strong>Month:</strong> 1-digit month of birth (no leading zero)</li>
+      <li><strong>Year:</strong> 4-digit birth year</li>
+    </ul>
 
-  <p><strong>Important:</strong> When asked to enter your email, be sure to use your <u>school email</u> (note that this is <strong>not</strong> @californiava.org but <strong>@caliva.org</strong>). For example:</p>
-  <pre>user@caliva.org</pre>
-  <p>✅ After submitting the form, check your email for instructions on how to reset your password. Allow up to one business day. Follow the steps provided to get back into your account.</p>
+    <div style="background:#f9f9f9; padding:15px; border-radius:8px; margin:20px 0;">
+      <h4>🎯 Password Generator</h4>
+      <label>First Initial: <input type="text" id="firstInitial" maxlength="1" style="width:30px; text-transform:uppercase;"></label><br><br>
+      <label>Last Initial: <input type="text" id="lastInitial" maxlength="1" style="width:30px; text-transform:uppercase;"></label><br><br>
+      <label>Day of Birth (1-31): <input type="number" id="day" min="1" max="31" style="width:60px;"></label><br><br>
+      <label>Month of Birth (1-12): <input type="number" id="month" min="1" max="12" style="width:60px;"></label><br><br>
+      <label>Year of Birth (4 digits): <input type="number" id="year" min="1900" max="2100" style="width:80px;"></label><br><br>
+      <button onclick="generatePassword()">🚀 Generate Password</button>
+      <p id="passwordResult" style="margin-top:15px; font-weight:bold; color:#5b3cc4;"></p>
+    </div>
+
+    <h3>🔒 Enter Your Password and Click "Next"</h3>
+    <p>Paste or type your generated password into the password field, then click <strong>Next</strong>.</p>
+    <img src="https://i.postimg.cc/C5DGmQ9g/Screen-Shot-2025-07-03-at-5-19-33-PM.png" alt="Enter Password">
+
+    <h3>✅ Agree to Google’s Terms and Update Your Password</h3>
+    <p>You may be prompted to review and agree to Google's Terms of Service and Privacy Policy. After agreeing, you'll be asked to create a new password. Make sure to save this password and remember it for future logins.</p>
+
+    <h3>🎉 You’re In!</h3>
+    <p>You can now use Google Drive, Docs, Classroom, and all CAVA Google tools. Stay logged in during the day so you can also use Amplify Classroom and apps like Google Slides and Docs across your different classes.</p>
+  </div>
+
+  <!-- Reset Password Section -->
+  <div id="reset" style="display:none;">
+    <h2>🔄 If you’ve signed in before but forgot your password:</h2>
+    <p>Don’t worry! If you can’t log in because you forgot your password, simply fill out the 
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSf7ibJRMsXPblo1OGCoAQtscVrJhzLvmrH6svRNMt1s1GmoqA/viewform" target="_blank">
+      CAVA Password Reset Request Form</a>.</p>
+
+    <p><strong>Important:</strong> When asked to enter your email, be sure to use your <u>school email</u> (note that this is <strong>not</strong> @californiava.org but <strong>@caliva.org</strong>). For example:</p>
+    <pre>user@caliva.org</pre>
+    <p>✅ After submitting the form, check your email for instructions on how to reset your password. Allow up to one business day. Follow the steps provided to get back into your account.</p>
+  </div>
 
   <script>
     function generatePassword() {
@@ -153,6 +155,13 @@
       const password = `${first}${last}${day}${month}${year}`;
       document.getElementById('passwordResult').innerText = `Your password is: ${password}`;
     }
+
+    function showSection(section) {
+      document.getElementById('login').style.display = (section === 'login') ? 'block' : 'none';
+      document.getElementById('reset').style.display = (section === 'reset') ? 'block' : 'none';
+    }
   </script>
 </body>
 </html>
+
+
