@@ -57,9 +57,10 @@
 <body>
   <h1>🚀 How to Log In to Your CAVA Google Account</h1>
 
-  <!-- Modern centered large buttons with anchor links -->
+  <!-- Modern centered large buttons with show/hide functionality -->
   <div style="text-align: center; margin-top: 40px;">
     <a href="#login"
+       onclick="showSection('login')"
        style="
          display: inline-block;
          padding: 22px 60px;
@@ -79,6 +80,7 @@
     </a>
 
     <a href="#reset"
+       onclick="showSection('reset')"
        style="
          display: inline-block;
          padding: 22px 60px;
@@ -150,7 +152,7 @@
   </div>
 
   <!-- Reset Password Section -->
-  <div id="reset" style="margin-top:60px;">
+  <div id="reset" style="display:none;">
     <h2>🔄 If you’ve signed in before but forgot your password:</h2>
     <p>Don’t worry! If you can’t log in because you forgot your password, simply fill out the 
       <a href="https://docs.google.com/forms/d/e/1FAIpQLSf7ibJRMsXPblo1OGCoAQtscVrJhzLvmrH6svRNMt1s1GmoqA/viewform" target="_blank">
@@ -176,6 +178,12 @@
 
       const password = `${first}${last}${day}${month}${year}`;
       document.getElementById('passwordResult').innerText = `Your password is: ${password}`;
+    }
+
+    function showSection(section) {
+      document.getElementById('login').style.display = (section === 'login') ? 'block' : 'none';
+      document.getElementById('reset').style.display = (section === 'reset') ? 'block' : 'none';
+      window.location.hash = section;
     }
   </script>
 </body>
